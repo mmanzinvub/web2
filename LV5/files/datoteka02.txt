@@ -1,0 +1,7 @@
+ponedjeljak
+utorak
+srijeda
+četvrtak
+petak
+subota
+nedjelja

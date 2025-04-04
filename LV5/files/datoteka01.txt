@@ -1,0 +1,1 @@
+Ovaj string je u datoteci datoteka01.txt i tako, ovak

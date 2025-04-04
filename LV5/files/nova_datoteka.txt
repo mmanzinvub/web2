@@ -1,0 +1,22 @@
+Ovo je tekst koji ćemo zapisati u datoteku ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+Ovaj teskt ide na kraj postojeće datoteke ./files/nova_datoteka.txt 
+evo malo teksta 
+Evo malo teksta </b>boldanog</b>
