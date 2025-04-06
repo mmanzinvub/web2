@@ -27,7 +27,7 @@ if (!function_exists('prikazCsv')) {
 			$izlaz .= "</table>";
 			fclose($handle);
 		}else{
-		   $izlaz = "Datoteka <b> $file </b> ne psotoji";
+		   $izlaz = "Datoteka <b> $file </b> ne postoji";
 		}
 	    return $izlaz; 	
 	 }

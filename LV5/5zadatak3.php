@@ -8,6 +8,7 @@ include 'funkcije.php';
 <body>
     <form method="POST">
         <label>Unesite naziv datoteke: </label>
+        <!-- Potrebno je dati name atribut input elementu da bi kasnije dohvatili informacije iz njega sa $_POST -->
         <input type="text" name="filename">
         <button type="submit">Ucitaj</button>
         <br>

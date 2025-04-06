@@ -1,8 +1,8 @@
 <?php
 include 'header.php';
 include 'funkcije.php';
+?>
 
-echo '
 <html>
 
 <body>
@@ -14,18 +14,21 @@ echo '
     </form>
 </body>
 
-</html>';
+</html>
 
+<?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $filename = $_POST["filename"];
-    $path = "/opt/lampp/htdocs/LV5/files/$filename";
+    
+    //promjeni path ako ne radis na windows
+    $path = "C:/xampp/htdocs/LV5/files/$filename";
+    $path_info = pathinfo($path);
 
     $content = file_get_contents($path);
 
-    if(file_exists($path)) {
-        if(//file_extension == .csv) {
-            //iscrtaj tablu
-        }
+    if($path_info['extension'] == 'csv') {
+        echo prikazCsv($path);
+    } elseif (file_exists($path)) {
         echo $content;
     } else {
         echo $filename . " ne postoji";
