@@ -98,7 +98,88 @@ switch ($in_obj->procedura) {
             echo '{"h_message":"Successfully logged out","h_errcode":0}';
             return;
         }
+
+    case "p_add_user":
+        $users = [];
+
+        $users = json_decode(file_get_contents("users.json"), true);
+        if (!is_array($users)) {
+            $users = [];
+        }
+
+        $max_id = 0;
+        foreach ($users as $user) {
+            if (isset($user['id']) && $user['id'] > $max_id) {
+                $max_id = $user['id'];
+            }
+        }
+
+        $new_user = [
+            "id" => $max_id + 1,
+            "username" => $in_obj->username,
+            "password" => $in_obj->password,
+            "ime" => $in_obj->ime,
+            "prezime" => $in_obj->prezime
+        ];
+           
+        $users[] = $new_user;
+
+        file_put_contents("users.json", json_encode($users));
+        echo '{"h_message":"User added","h_errcode":0}';
+        return;
+
+    case "p_update_user":
+        $users = [];
+
+        $users = json_decode(file_get_contents("users.json"), true);
+        if (!is_array($users)) {
+            $users = [];
+        }
+
+        $found = false;
+        foreach ($users as &$user) {
+            if ($user['id'] == $in_obj->id) {
+                if (isset($in_obj->ime)) $user['ime'] = $in_obj->ime;
+                if (isset($in_obj->prezime)) $user['prezime'] = $in_obj->prezime;
+                $found = true;
+                break;
+            }
+        }
+
+        if ($found) {
+            file_put_contents("users.json", json_encode($users));
+            echo '{"h_message":"User updated","h_errcode":0}';
+        } else {
+            echo '{"h_message":"User not found","h_errcode":994}';
+        }
+        return;
+
+        case "p_delete_user":
+            $users = [];
+
+            $users = json_decode(file_get_contents("users.json"), true);
+            if (!is_array($users)) {
+                $users = [];
+            }
         
+            $found = false;
+            foreach ($users as $key => $user) {
+                if ($user['id'] == $in_obj->id) {
+                    unset($users[$key]);
+                    $found = true;
+                    break;
+                }
+            }
+
+            if ($found) {
+                $users = array_values($users); //nije potrebno
+                file_put_contents("users.json", json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+                echo '{"h_message":"User deleted","h_errcode":0}';
+            } else {
+                echo '{"h_message":"User not found","h_errcode":993}';
+            }
+            return;
+
     default:
         echo '{"h_message":"method error","h_errcode":997}';
         return;

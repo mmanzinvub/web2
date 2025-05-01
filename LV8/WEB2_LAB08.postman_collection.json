@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "bdd6684e-1087-45a7-bc06-815f9ecd58ac",
+		"name": "WEB2_LAB08",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40176412",
+		"_collection_link": "https://vub999.postman.co/workspace/UPV~fd29f6aa-bcd5-4711-aeab-3347a5f3901f/collection/40176412-bdd6684e-1087-45a7-bc06-815f9ecd58ac?action=share&source=collection_link&creator=40176412"
+	},
+	"item": [
+		{
+			"name": "p_zupanije",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost/mmanzin/LV8/router.php?procedura=p_zupanije",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"mmanzin",
+						"LV8",
+						"router.php"
+					],
+					"query": [
+						{
+							"key": "procedura",
+							"value": "p_zupanije"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "p_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_login",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testpass",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "p_add_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_add_user",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "novi",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tajna",
+							"type": "text"
+						},
+						{
+							"key": "ime",
+							"value": "Novi",
+							"type": "text"
+						},
+						{
+							"key": "prezime",
+							"value": "Korisnik",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "ZAD10 DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_login",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testpass",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "ZAD10 PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_login",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testpass",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "p_users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_login",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "testpass",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "procedura",
+							"value": "p_users",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "procedura",
+							"value": "p_logout",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "p_user_by_id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_login",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "testpass",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "procedura",
+							"value": "p_user_by_id",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "procedura",
+							"value": "p_logout",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "p_refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_refresh",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "p_update_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_update_user",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "ime",
+							"value": "Ana",
+							"type": "text"
+						},
+						{
+							"key": "prezime",
+							"value": "Novak",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "p_delete_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_delete_user",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		},
+		{
+			"name": "p_nepoznato",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "procedura",
+							"value": "p_nepoznato",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://localhost/mmanzin/LV8/router.php"
+			},
+			"response": []
+		}
+	]
+}
