@@ -21,7 +21,7 @@ class FormBuilder
     }
     public function input($id, $type, $value = '', $attributes = [])
     {
-        $attributes['id'] = $id;
+        $attributes['name'] = $id;
         $attributes['type'] = $type;
         $attributes['value'] = $value;
         $attrString = $this->generateAttributes($attributes);
@@ -29,13 +29,13 @@ class FormBuilder
     }
     public function textarea($id, $content = '', $attributes = [])
     {
-        $attributes['id'] = $id;
+        $attributes['name'] = $id;
         $attrString = $this->generateAttributes($attributes);
         return "<textarea{$attrString}>{$content}</textarea>";
     }
     public function select($id, $options, $attributes = [])
     {
-        $attributes['id'] = $id;
+        $attributes['name'] = $id;
         $attrString = $this->generateAttributes($attributes);
         $html = "<select{$attrString}>";
         foreach ($options as $value => $label) {
@@ -81,26 +81,4 @@ class FormBuilder
         return $attrString;
     }
 }
-$form = new FormBuilder('POST', 'submit.php', ['class' => 'my-form']);
-echo $form->open();
-echo $form->input('username', 'text', '', ['placeholder' => 'Username', 'required' => 'required']) . "<br>" . "<br>";
-echo $form->input('password', 'password', '', ['placeholder' => 'Password', 'required' => 'required']) . "<br>" . "<br>";
-echo $form->input('submit', 'submit', 'Submit');
-$options = [
-    'option1' => 'Option 1',
-    'option2' => 'Option 2',
-    'option3' => 'Option 3'
-];
-echo $form->select('my_select', $options) . "<br>";
-// Radio elements
-echo $form->radio('my_radio', 'radio1', 'radio1', true) . "<br>";
-echo '<label for="radio1">Radio 1</label>';
-echo $form->radio('my_radio', 'radio2', 'radio2');
-echo '<label for="radio2">Radio 2</label>' . "<br>";
-// Checkbox elements
-echo $form->checkbox('my_checkbox[]', 'check1', 'check1', true);
-echo '<label for="check1">Checkbox 1</label>' . "<br>";
-echo $form->checkbox('my_checkbox[]', 'check2', 'check2') . "<br>";
-echo '<label for="check2">Checkbox 2</label>' . "<br>";
-echo $form->input('submit', 'submit', 'Submit');
-echo $form->close();
+?>
